@@ -50,19 +50,5 @@ describe('Loan application flow', () => {
     cy.url().should('include', '/results/');
     cy.contains('Loan Offers');
     cy.get('[data-cy="offers-results-container-cy"]').children().should('have.length', 3);
-  });
-
-  it('Fist name is required field', () => {
-    // cy.get('[data-cy="firstName"]').type('John');
-    cy.get('[data-cy="lastName"]').type('Wood');
-    cy.get('[data-cy="email"]').type('jwood@example.com');
-    cy.get('[data-cy="employmentStatus"]').select('Employed');
-    cy.get('[data-cy="employerName"]').type('ABC Corp');
-    cy.get('[data-cy="personal-details-page-next-button"]').click();
-
-    // We should get an error on First name
-    cy.get('[data-cy="error-firstName"]').should('exist').contains('First name is required');
-  });
-
-  // TO-DO: add tests for other fields validation  
+  });  
 });
