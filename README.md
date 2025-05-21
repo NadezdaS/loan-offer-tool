@@ -34,23 +34,23 @@ cd ./server && npm install
 cd server
 npm run dev
 ```
-Runs the backend on: http://localhost:8080
+Runs the backend on: http://localhost:8080 (or your configured port - can be defined as PORT in ```.env``` file in the ```server``` folder)
 
 ### Start the front-end
+- Create the .env file in the ```client``` folder and set up your API base url: ```VITE_API_BASE_URL=http://localhost:<port>/api```
+- start the client
 ```bash
 cd client
 npm run dev
 ```
-Runs the frontend on: http://localhost:5173 (Vite default)
-
-```Make sure the frontend is configured to talk to the backend (e.g., via a proxy or VITE_API_URL in .env).```
+Runs the frontend on: http://localhost:5173 (Vite default).
 
 <br />
 
 
 ## 🧪 Running Tests
 
-### Unit tests
+### Unit tests with Jest
 run from the root folder
 ```bash
 npm test
@@ -82,3 +82,6 @@ npm run build
 cd client
 npm run build
 ```
+
+### 📝 License
+MIT – feel free to use and adapt.
