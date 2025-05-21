@@ -2,7 +2,7 @@ import axios from 'axios';
 import type { LoanApplicationForm } from '../../../shared/loanApplicationSchema';
 import type { LoanApplicationResponse, LenderOffer } from '../../../shared/types';
 
-const API_BASE = 'http://localhost:8080/api';
+const API_BASE = import.meta.env.VITE_API_BASE_URL;
 
 export const submitLoanApplication = async (data: LoanApplicationForm): Promise<LoanApplicationResponse> => {
 	const res = await axios.post<LoanApplicationResponse>(`${API_BASE}/loan-application`, data);
