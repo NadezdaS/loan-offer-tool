@@ -19,10 +19,11 @@ This is a monorepo full-stack application that allows users to enter their perso
 Run the following from the root to install dependencies for both frontend and backend:
 
 ```bash
-# Using npm workspaces (recommended)
 npm install
+```
 
-# OR manually install in each subfolder
+And also install client and server dependencies:
+```bash
 cd ./client && npm install
 cd ./server && npm install
 ```
